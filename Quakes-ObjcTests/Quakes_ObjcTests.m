@@ -47,9 +47,9 @@
     XCTAssertEqualObjects(time, quake.time);
     // For now we'll just set the alert to nil, you may want to use @"" instead
     XCTAssertNil(quake.alert);
-    XCTAssertEqualObjects(@"earthquake", quake.type);
     XCTAssertEqualWithAccuracy(33.663333299999998, quake.latitude, 0.0001);
     XCTAssertEqualWithAccuracy(-116.7776667, quake.longitude, 0.0001);
+    XCTAssertEqualObjects(@"earthquake", quake.type);
 }
 
 @end
