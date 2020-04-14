@@ -10,6 +10,8 @@
 
 @implementation FirstResponder
 
+@synthesize name = _name;  // here, _name could be whatever name we want.
+
 - (void)setName:(NSString *)name {
     
     // willSet
@@ -17,8 +19,14 @@
     _name = name.copy;
     
     // didSet
+}
+
+
+// The Getter:
+- (NSString *)name {
     
-    
+    // every time the name is requested, something can happen here.
+    return _name.copy;
 }
 
 @end
